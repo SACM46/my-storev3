@@ -1,13 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ImgComponents } from "./components/img/img.components";
-
+import { ImgComponent } from "./components/img/img.components";
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ImgComponents],
+  imports: [RouterOutlet, ImgComponent, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('my-storev3');
+  imgParent = '';
+  
 }

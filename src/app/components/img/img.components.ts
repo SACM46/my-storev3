@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-img',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './img.components.html',
-  styleUrl: './img.components.scss',
+  styleUrls: ['./img.components.scss'],
 })
-export class ImgComponents implements OnInit {
-  
+export class ImgComponent implements OnInit {
+
+  @Input() img: string = 'value of img component';
+
   constructor() {}
 
-  ngOnInit(): void {
-    // Initialization logic can go here
-  }
+  ngOnInit(): void {}
 }
