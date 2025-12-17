@@ -1,14 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ImgComponent } from "./components/img/img.components";
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ImgComponent } from './components/img/img.components';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ImgComponent, FormsModule],
+  standalone: true,
+  imports: [ImgComponent, FormsModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
-export class App {
+export class AppComponent {
   imgParent = '';
-  
+
+  onLoaded(img: string) {
+    console.log('log padre', img);
+  }
 }

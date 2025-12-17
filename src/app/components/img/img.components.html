@@ -1,5 +1,5 @@
 <h1>hijo</h1>
-<img width="200" [src]="img" *ngIf="img", else elseImag/>
+<img width="200" (load)="imgLoaded()" (error)="imgError()" [src]="img" *ngIf="img"; else elseImag/>
 <ng-template #elseImag>
-  <img src="./assets/images/default-image.png" width="200"/>
+  <img [src]="imageDefault" alt=""/>
 </ng-template>
