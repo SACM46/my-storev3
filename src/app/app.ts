@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { ImgComponent } from './components/img/img.components';
 import { ProductComponent } from './components/product/product';
 import { Product } from './models/product.model';
@@ -9,7 +8,7 @@ import { Product } from './models/product.model';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, ImgComponent, ProductComponent],
+  imports: [CommonModule, FormsModule, ImgComponent, ProductComponent,],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
